@@ -15,3 +15,12 @@ repo = 'tomasr/molokai'
 
 [[plugins]]
 repo = 'PProvost/vim-ps1'
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'

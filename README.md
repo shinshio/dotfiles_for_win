@@ -1,11 +1,11 @@
 # dotfiles_for_win
 
-## •K—v‚È‚à‚Ì
+## å¿…è¦ãªã‚‚ã®
 
-- VIM(ƒ_ƒEƒ“ƒ[ƒhAƒpƒXÝ’è‚ÍŠ„ˆ¤)
+- VIM(ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã€ãƒ‘ã‚¹è¨­å®šã¯å‰²æ„›)
 - Git
 
-## ƒCƒ“ƒXƒg[ƒ‹
+## ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 
 ```powershell
 cd ~
@@ -15,7 +15,7 @@ cd dotfiles_for_win
 ./installer.ps1
 ```
 
-## ƒAƒ“ƒCƒ“ƒXƒg[ƒ‹
+## ã‚¢ãƒ³ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 ```powershell
 cd ~/dotfiles_for_win
 ./uninstaller.ps1

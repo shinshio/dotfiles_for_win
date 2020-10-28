@@ -170,4 +170,6 @@ nnoremap <F8> :Mdpu2png<CR>
 " nerdtree
 noremap <F4> :NERDTreeToggle<CR>
 " colorscheme
-"colorscheme molokai
+colorscheme molokai
+" vim-trailing-whitespace
+nnoremap <F7> :FixWhitespace<CR>
