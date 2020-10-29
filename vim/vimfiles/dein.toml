@@ -8,9 +8,6 @@ repo = 'vim-airline/vim-airline'
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
-repo = 'preservim/nerdtree'
-
-[[plugins]]
 repo = 'tomasr/molokai'
 
 [[plugins]]
@@ -20,7 +17,13 @@ repo = 'PProvost/vim-ps1'
 repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
-repo = 'Yggdroot/indentLine'
+repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-repo = 'tpope/vim-fugitive'
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'

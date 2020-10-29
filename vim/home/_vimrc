@@ -108,6 +108,7 @@ set showmatch  " highlight match brackets
 syntax enable " syntax highlight
 set nofoldenable " no line folder
 set nowrap       " no line wrap
+colorscheme default " colorscheme
 
 " status line(no powerline)-------------------
 "set statusline=%F  " file path
@@ -170,7 +171,32 @@ au Filetype markdown command! Mdpu2png : ! "C:\work\powershell\scripts\mdpu2png.
 nnoremap <F8> :Mdpu2png<CR>
 " nerdtree
 noremap <F4> :NERDTreeToggle<CR>
-" colorscheme
-"colorscheme molokai
 " vim-trailing-whitespace
 nnoremap <F7> :FixWhitespace<CR>
+" unite
+nnoremap [unite] <Nop>
+nmap <Space>u [unite]
+let g:unite_enable_start_insert = 1
+let g:unite_source_file_mru_limit = 50
+let g:unite_source_file_mru_filename_format = ''
+nnoremap [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap [unite]b :<C-u>Unite buffer<CR>
+nnoremap [unite]r :<C-u>Unite -buffer-name=register register<CR>
+nnoremap [unite]m :<C-u>Unite file_mru<CR>
+nnoremap [unite]c :<C-u>Unite bookmark<CR>
+nnoremap [unite]a :<C-u>UniteBookmarkAdd<CR>
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings()
+    nmap <buffer> <ESC> <Plug>(unite_exit)
+    nnoremap <buffer> <expr> <C-j> unite#do_action('split')
+    inoremap <buffer> <expr> <C-j> unite#do_action('split')
+    nnoremap <buffer> <expr> <C-l> unite#do_action('vsplit')
+    inoremap <buffer> <expr> <C-l> unite#do_action('vsplit')
+    nnoremap <buffer> <expr> <C-o> unite#do_action('open')
+    inoremap <buffer> <expr> <C-o> unite#do_action('open')
+endfunction
+" indentLine
+let g:indentLine_enabled = 1
+let g:indentLine_concealcursor = 0
+let g:indentLine_faster = 1
+let g:indentLine_color_term = 8

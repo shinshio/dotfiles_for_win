@@ -1,9 +1,4 @@
-﻿
-$host.UI.WriteLine("Loading profile...")
-$start_time = Get-Date
-
-
-# ----------
+﻿# ----------
 # variables
 # ----------
 
@@ -141,6 +136,3 @@ function Prompt {
     " "
 }
 
-$end_time = Get-Date
-$load_time = ($end_time - $start_time).tostring("ffff")
-$host.UI.WriteLine("Loading completed! [$($load_time) ms]")
