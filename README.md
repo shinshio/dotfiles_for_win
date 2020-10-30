@@ -3,7 +3,7 @@
 ## 必要なもの
 
 - VIM(ダウンロード、パス設定は割愛)
-- Git
+- Git(必要に応じてプロキシ設定)
 
 ## インストール
 
@@ -19,9 +19,11 @@ cd dotfiles_for_win
 
 ## アンインストール
 
-powershellで以下を実行する。
+symlinkファイルを削除する。
 
-```powershell
-cd ~/dotfiles_for_win
-./uninstaller.ps1
-```
+対象は以下。
+
+- ~\_vimrc
+- ~\vimfiles\*
+- ~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+
