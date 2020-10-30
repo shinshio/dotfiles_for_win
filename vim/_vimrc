@@ -1,6 +1,91 @@
-﻿set fileencodings=utf-8,cp932,sjis
+﻿" -----------------------
+"   Open files encoding
+" -----------------------
+set fileencodings=utf-8,sjis,cp932
 
-" dein---------------------------------
+" --------
+"   file
+" --------
+"set fenc=utf-8 "file encoding
+set noswapfile " no swap file
+set nobackup   " no backup file
+set noundofile " no undo file
+set autoread   " file auto reload
+set hidden     " read another file if unsave
+set showcmd    " show command
+set clipboard=unnamed,autoselect " use clipboard
+set wildmode=list:full " tab complete with list
+
+" --------
+"   view
+" --------
+set number " line number
+" set cursorline " highlight cursor line
+" set cursorcolumn " highlight current column
+set virtualedit=onemore " block cursor
+set smartindent " smart indent
+set visualbell " show beep
+set showmatch  " highlight match brackets
+syntax enable " syntax highlight
+set nofoldenable " no line folder
+set nowrap       " no line wrap
+colorscheme default " colorscheme
+
+" -----------------------------
+"   status line(no powerline)
+" -----------------------------
+"set statusline=%F  " file path
+"set statusline+=%m " flag of no save
+"set statusline+=%r " flag of readonly
+"set statusline+=%h " flag of help
+"set statusline+=%w " flag of preview
+"set statusline+=%= " separate line
+"set statusline+=[ENC=%{&fileencoding}] " file encoding
+"set statusline+=[ROW=%l/%L] " row number
+"set laststatus=2   " show last status
+
+" -------
+"   Tab
+" -------
+set list listchars=tab:\?\- " change tab character
+set expandtab    " change tab to spaces
+set tabstop=4    " tab stop
+set shiftwidth=4 " auto tab indent
+
+" ----------
+"   search
+" ----------
+set ignorecase " if lowercase, search upper and lower
+set smartcase  " if uppercase, search only upper
+set incsearch  " highlight character at every input character
+set wrapscan   " wrap search results
+set hlsearch   " highlight searched word
+
+" ---------------
+"   key binding
+" ---------------
+inoremap jj         <ESC>
+noremap  <S-h>      0
+noremap  <S-l>      $
+nnoremap +          <C-a>
+nnoremap -          <C-x>
+nmap     <Esc><Esc> :nohlsearch<CR><Esc>
+nnoremap j          gj
+nnoremap k          gk
+
+" ---------
+"   shell
+" ---------
+" powershell
+set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+set shellcmdflag=-c
+set shellquote=\"
+set shellxquote=
+
+" ----------
+"   plugin
+" ----------
+" ** dein **
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
@@ -48,7 +133,7 @@ if len(s:removed_plugins) > 0
   call dein#recache_runtimepath()
 endif
 
-" vim-airline-------------------------
+" ** vim-airline
 let g:airline_theme = 'molokai'
 set laststatus=2
 let g:airline_powerline_fonts = 1
@@ -86,94 +171,22 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = '☰'
 let g:airline_symbols.maxlinenr = ''
 
-" file-------------------------------
-"set fenc=utf-8 "file encoding
-set noswapfile " no swap file
-set nobackup   " no backup file
-set noundofile " no undo file
-set autoread   " file auto reload
-set hidden     " read another file if unsave
-set showcmd    " show command
-set clipboard=unnamed,autoselect " use clipboard
-set wildmode=list:full " tab complete with list
-
-" view----------------------------
-set number " line number
-" set cursorline " highlight cursor line
-" set cursorcolumn " highlight current column
-set virtualedit=onemore " block cursor
-set smartindent " smart indent
-set visualbell " show beep
-set showmatch  " highlight match brackets
-syntax enable " syntax highlight
-set nofoldenable " no line folder
-set nowrap       " no line wrap
-colorscheme default " colorscheme
-
-" status line(no powerline)-------------------
-"set statusline=%F  " file path
-"set statusline+=%m " flag of no save
-"set statusline+=%r " flag of readonly
-"set statusline+=%h " flag of help
-"set statusline+=%w " flag of preview
-"set statusline+=%= " separate line
-"set statusline+=[ENC=%{&fileencoding}] " file encoding
-"set statusline+=[ROW=%l/%L] " row number
-"set laststatus=2   " show last status
-
-" Tab behavior-----------------------------
-set list listchars=tab:\?\- " change tab character
-set expandtab    " change tab to spaces
-set tabstop=4    " tab stop
-set shiftwidth=4 " auto tab indent
-
-" search---------------------------
-set ignorecase " if lowercase, search upper and lower
-set smartcase  " if uppercase, search only upper
-set incsearch  " highlight character at every input character
-set wrapscan   " wrap search results
-set hlsearch   " highlight searched word
-
-" key binding----------------------------------------
-" jj <= ESC
-inoremap <silent> jj <ESC>
-" shift-H <= 0
-noremap <S-h> 0
-" shift-L <= $
-noremap <S-l> $
-" +,- <= incrementm, decriment
-nnoremap + <C-a>
-nnoremap - <C-x>
-" ESC>ESC <= :nohlsearch
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
-" if wrapped line, cursor only j, k
-nnoremap j gj
-nnoremap k gk
-
-" shell-------------------------
-" powershell
-set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-set shellcmdflag=-c
-set shellquote=\"
-set shellxquote=
-
-" plugin-----------------------
-" .md
+" ** Previm
 let g:vim_markdown_conceal=0
-au BufRead,BufNewFile *.md set filetype=markdown
 let g:previm_disable_default_css = 1
-let g:previm_custom_css_path = 'C:/Users/10035637417/vimfiles/css/markdown.css'
+let g:previm_custom_css_path = 'C:/Users/10035637417/vimfiles/stylesheet/markdown.css'
 nnoremap <F5> :PrevimOpen<CR>
-" plantuml
+
+" ** plantuml
 let g:plantuml_executable_script="C:/tools/plantuml/plantuml.bat"
 au FileType plantuml command! OpenUml :!Start-Process chrome %:p
 au Filetype markdown command! Mdpu2png : ! "C:\work\powershell\scripts\mdpu2png.ps1" %:p
 nnoremap <F8> :Mdpu2png<CR>
-" nerdtree
-noremap <F4> :NERDTreeToggle<CR>
-" vim-trailing-whitespace
+
+" ** vim-trailing-whitespace
 nnoremap <F7> :FixWhitespace<CR>
-" unite
+
+" ** unite
 nnoremap [unite] <Nop>
 nmap <Space>u [unite]
 let g:unite_enable_start_insert = 1
@@ -195,8 +208,12 @@ function! s:unite_my_settings()
     nnoremap <buffer> <expr> <C-o> unite#do_action('open')
     inoremap <buffer> <expr> <C-o> unite#do_action('open')
 endfunction
-" indentLine
+
+" ** indentLine
 let g:indentLine_enabled = 1
 let g:indentLine_concealcursor = 0
 let g:indentLine_faster = 1
 let g:indentLine_color_term = 8
+
+
+filetype plugin indent on

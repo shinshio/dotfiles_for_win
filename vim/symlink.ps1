@@ -3,23 +3,26 @@ Dotfiles for VIM installer for windows10
     - Required: vim for windows (kaoriya)
 #>
 
-$CurrentDir  = (Split-Path $MyInvocation.MyCommand.path) + "\"
-$HOME_PATH = $env:USERPROFILE + "\"
-$VIMFILES_PATH = $env:USERPROFILE + "\vimfiles\"
-$DEIN_FILENAME = "dein.toml"
-$DEIN_LAZY_FILENAME = "dein_lazy.toml"
-$VIMRC_FILENAME = "_vimrc"
+$CurrentDir  = (Split-Path $MyInvocation.MyCommand.path)
+$HOME_PATH = $env:USERPROFILE
+
+# mkdir
+
+xcopy /t/e $CurrentDir $HOME_PATH
 
 
-# vimfiles
-if (!(Test-Path $VIMFILES_PATH)) {
-    mkdir $VIMFILES_PATH
+#mklink include subfolder
+
+$files = Get-ChildItem $CurrentDir -Recurse
+foreach ($linked in $files) {
+    if (!$linked.PSIsContainer) {
+        if ($linked.FullName -eq $MyInvocation.MyCommand.path) {
+            continue
+        }
+        $symfile = $linked.FullName.Replace($CurrentDir, $HOME_PATH)
+        echo ($linked.FullName + "`r`n>> " + $symfile)
+        cmd /c mklink $symfile $linked.FullName
+    }
 }
-
-cmd /c mklink ($VIMFILES_PATH + $DEIN_FILENAME)      ($CurrentDir + "vimfiles\" + $DEIN_FILENAME)
-cmd /c mklink ($VIMFILES_PATH + $DEIN_LAZY_FILENAME) ($CurrentDir + "vimfiles\" + $DEIN_LAZY_FILENAME)
-
-# vimrc
-cmd /c mklink ($HOME_PATH + $VIMRC_FILENAME) ($CurrentDir + "home\" + $VIMRC_FILENAME)
 
 pause
