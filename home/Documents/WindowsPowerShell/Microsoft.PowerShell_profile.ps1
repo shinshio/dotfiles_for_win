@@ -89,6 +89,7 @@ function edge_dtems() {start microsoft-edge:$dtems_hp}
 function exit_(){exit}
 Set-Alias q exit_
 Set-Alias v vim
+Set-Alias gv gvim
 Set-Alias which where.exe
 Set-Alias yoyakuhyo c:/tools/yoyakuhyo/yoyakuhyo.exe
 
