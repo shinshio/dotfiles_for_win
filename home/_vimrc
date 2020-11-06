@@ -72,6 +72,7 @@ nnoremap -          <C-x>
 nmap     <Esc><Esc> :nohlsearch<CR><Esc>
 nnoremap j          gj
 nnoremap k          gk
+let mapleader = "\<Space>"
 
 " ---------
 "   shell
