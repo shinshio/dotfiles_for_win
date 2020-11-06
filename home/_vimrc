@@ -29,7 +29,7 @@ set showmatch  " highlight match brackets
 syntax enable " syntax highlight
 set nofoldenable " no line folder
 set nowrap       " no line wrap
-colorscheme default " colorscheme
+"colorscheme default " colorscheme
 
 " -----------------------------
 "   status line(no powerline)

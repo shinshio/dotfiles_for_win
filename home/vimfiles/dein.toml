@@ -67,18 +67,20 @@ repo = 'cohama/lexima.vim'
 [[plugins]]
 repo = 'tomasr/molokai'
 
-[[plugins]]
-repo = 'PProvost/vim-ps1'
-
+# -------
+# coding
+# -------
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 hook_add = '''
   nnoremap <F7> :FixWhitespace<CR>
 '''
 
+[[plugins]]
+repo = 'preservim/nerdcommenter'
+
 # ------
 # shell
 # ------
 [[plugins]]
 repo = 'thinca/vim-quickrun'
-
