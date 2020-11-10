@@ -1,0 +1,4 @@
+{
+  "http.proxy": "http://in-proxy-o:8080",
+  "python.jediEnabled": false
+}

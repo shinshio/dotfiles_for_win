@@ -1,6 +1,6 @@
 
 # ----------
-# Powerline
+# view
 # ----------
 [[plugins]]
 repo = 'vim-airline/vim-airline'
@@ -8,50 +8,23 @@ repo = 'vim-airline/vim-airline'
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
+[[plugins]]
+repo = 'jacoborus/tender.vim'
+hook_add = '''
+  au VimEnter * nested colorscheme tender
+'''
+
+
 # ----
 # git
 # ----
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
-# ------
-# unite
-# ------
-[[plugins]]
-repo = 'Shougo/unite.vim'
-hook_add = '''
-  nnoremap [unite] <Nop>
-  nmap <Leader>u [unite]
-  let g:unite_enable_start_insert = 1
-  let g:unite_source_file_mru_limit = 50
-  let g:unite_source_file_mru_filename_format = ''
-  nnoremap [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-  nnoremap [unite]b :<C-u>Unite buffer<CR>
-  nnoremap [unite]r :<C-u>Unite -buffer-name=register register<CR>
-  nnoremap [unite]m :<C-u>Unite file_mru<CR>
-  nnoremap [unite]c :<C-u>Unite bookmark<CR>
-  nnoremap [unite]a :<C-u>UniteBookmarkAdd<CR>
-  autocmd FileType unite call s:unite_my_settings()
-  function! s:unite_my_settings()
-    nmap <buffer> <ESC> <Plug>(unite_exit)
-    nnoremap <buffer> <expr> <C-j> unite#do_action('split')
-    inoremap <buffer> <expr> <C-j> unite#do_action('split')
-    nnoremap <buffer> <expr> <C-l> unite#do_action('vsplit')
-    inoremap <buffer> <expr> <C-l> unite#do_action('vsplit')
-    nnoremap <buffer> <expr> <C-o> unite#do_action('open')
-    inoremap <buffer> <expr> <C-o> unite#do_action('open')
-  endfunction
-'''
 
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
-# -----
-# lint
-# -----
+# -------
+# coding
+# -------
 [[plugins]]
 repo = 'Yggdroot/indentLine'
 hook_add = '''
@@ -65,12 +38,6 @@ hook_add = '''
 repo = 'cohama/lexima.vim'
 
 [[plugins]]
-repo = 'tomasr/molokai'
-
-# -------
-# coding
-# -------
-[[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 hook_add = '''
   nnoremap <F7> :FixWhitespace<CR>
@@ -79,8 +46,10 @@ hook_add = '''
 [[plugins]]
 repo = 'preservim/nerdcommenter'
 
+
 # ------
 # shell
 # ------
 [[plugins]]
 repo = 'thinca/vim-quickrun'
+
