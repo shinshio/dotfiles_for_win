@@ -4,89 +4,8 @@
 set fileencodings=utf-8,sjis,cp932
 
 " --------
-"   file
+"   dein
 " --------
-"set fenc=utf-8 "file encoding
-set noswapfile " no swap file
-set nobackup   " no backup file
-set noundofile " no undo file
-set autoread   " file auto reload
-set hidden     " read another file if unsave
-set showcmd    " show command
-set clipboard=unnamed,autoselect " use clipboard
-set wildmode=list:full " tab complete with list
-
-" --------
-"   view
-" --------
-set number " line number
-" set cursorline " highlight cursor line
-" set cursorcolumn " highlight current column
-set virtualedit=onemore " block cursor
-set smartindent " smart indent
-set visualbell " show beep
-set showmatch  " highlight match brackets
-syntax enable " syntax highlight
-set nofoldenable " no line folder
-set nowrap       " no line wrap
-"colorscheme default " colorscheme
-
-" -----------------------------
-"   status line(no powerline)
-" -----------------------------
-"set statusline=%F  " file path
-"set statusline+=%m " flag of no save
-"set statusline+=%r " flag of readonly
-"set statusline+=%h " flag of help
-"set statusline+=%w " flag of preview
-"set statusline+=%= " separate line
-"set statusline+=[ENC=%{&fileencoding}] " file encoding
-"set statusline+=[ROW=%l/%L] " row number
-"set laststatus=2   " show last status
-
-" -------
-"   Tab
-" -------
-set list listchars=tab:\?\- " change tab character
-set expandtab    " change tab to spaces
-set tabstop=4    " tab stop
-set shiftwidth=4 " auto tab indent
-
-" ----------
-"   search
-" ----------
-set ignorecase " if lowercase, search upper and lower
-set smartcase  " if uppercase, search only upper
-set incsearch  " highlight character at every input character
-set wrapscan   " wrap search results
-set hlsearch   " highlight searched word
-
-" ---------------
-"   key binding
-" ---------------
-inoremap jj         <ESC>
-noremap  <S-h>      0
-noremap  <S-l>      $
-nnoremap +          <C-a>
-nnoremap -          <C-x>
-nmap     <Esc><Esc> :nohlsearch<CR><Esc>
-nnoremap j          gj
-nnoremap k          gk
-let mapleader = "\<Space>"
-
-" ---------
-"   shell
-" ---------
-" powershell
-set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-set shellcmdflag=-c
-set shellquote=\"
-set shellxquote=
-
-" ----------
-"   plugin
-" ----------
-" ** dein **
 let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
@@ -134,8 +53,11 @@ if len(s:removed_plugins) > 0
   call dein#recache_runtimepath()
 endif
 
-" ** vim-airline
+" ---------------
+"   vim-airline
+" ---------------
 set laststatus=2
+set cmdheight=2
 set showtabline=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
@@ -152,3 +74,89 @@ filetype plugin indent on
 set shellslash
 set t_Co=256
 set termguicolors
+"
+" --------
+"   file
+" --------
+"set fenc=utf-8
+set noswapfile
+set nobackup
+set noundofile
+set autoread
+set hidden
+set showcmd
+set clipboard=unnamed,autoselect
+set wildmode=list:full
+
+" --------
+"   view
+" --------
+set number
+" set cursorline
+" set cursorcolumn
+set virtualedit=onemore " block cursor
+set smartindent
+set visualbell
+set t_vb=
+set showmatch  " highlight match brackets
+set matchtime=1 " set highlight match brackets time
+syntax enable
+set nofoldenable
+set wrap
+set display=lastline
+"colorscheme default
+
+" ----------------------------------
+"   status line(without powerline)
+" ----------------------------------
+"set statusline=%F  " file path
+"set statusline+=%m " flag of no save
+"set statusline+=%r " flag of readonly
+"set statusline+=%h " flag of help
+"set statusline+=%w " flag of preview
+"set statusline+=%= " separate line
+"set statusline+=[ENC=%{&fileencoding}] " file encoding
+"set statusline+=[ROW=%l/%L] " row number
+"set laststatus=2   " show last status
+
+" ----------
+"   Indent
+" ----------
+set list listchars=tab:\?\- " change tab character
+set expandtab    " change tab to spaces
+set tabstop=4
+set shiftwidth=4
+set shiftround
+
+" ----------
+"   search
+" ----------
+set ignorecase " if lowercase, search upper and lower
+set smartcase  " if uppercase, search only upper
+set incsearch  " highlight character at every input character
+set wrapscan   " wrap search results
+set hlsearch   " highlight searched word
+
+" ---------------
+"   key binding
+" ---------------
+nnoremap Y y$
+inoremap jj         <ESC>
+noremap  <S-h>      0
+noremap  <S-l>      $
+nnoremap +          <C-a>
+nnoremap -          <C-x>
+nmap     <Esc><Esc> :nohlsearch<CR><Esc>
+nnoremap j          gj
+nnoremap k          gk
+let mapleader = "\<Space>"
+
+" ---------
+"   shell
+" ---------
+" powershell
+set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+set shellcmdflag=-c
+set shellquote=\"
+set shellxquote=
+

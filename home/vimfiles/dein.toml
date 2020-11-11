@@ -45,6 +45,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'preservim/nerdcommenter'
+hook_add = '''
+  let g:NERDSpaceDelims = 1
+'''
 
 
 # ------
