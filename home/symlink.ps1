@@ -8,7 +8,7 @@ $HOME_PATH = $env:USERPROFILE
 
 # mkdir
 
-xcopy /t/e $CurrentDir $HOME_PATH
+xcopy /t/e/y $CurrentDir $HOME_PATH
 
 
 #mklink include subfolder
@@ -20,8 +20,13 @@ foreach ($linked in $files) {
             continue
         }
         $symfile = $linked.FullName.Replace($CurrentDir, $HOME_PATH)
-        echo ($linked.FullName + "`r`n>> " + $symfile)
-        cmd /c mklink $symfile $linked.FullName
+        if (Test-Path $symfile) {
+            echo ($symfile + "`r`n  >> 既に存在するのでスキップします。")
+            continue
+        } else {
+            echo ($symfile + "`r`n  >> シンボリックリンクを作成します。")
+            cmd /c mklink $symfile $linked.FullName
+        }
     }
 }
 
