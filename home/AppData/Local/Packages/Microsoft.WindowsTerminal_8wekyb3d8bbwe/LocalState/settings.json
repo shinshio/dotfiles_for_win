@@ -52,13 +52,27 @@
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "name": "コマンド プロンプト",
                 "commandline": "cmd.exe",
-                "hidden": false
+                "hidden": false,
+                "backgroundImage": "%USERPROFILE%\\Pictures\\WindowsTerminal\\cmd.png",
+                "backgroundImageStretchMode": "none",
+                "backgroundImageAlignment": "bottomRight",
+                "backgroundImageOpacity": 0.4
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": true,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "name": "Git Bash",
+                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe -li",
+                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "startingDirectory": "%USERPROFILE%",
+                "backgroundImage": "%USERPROFILE%\\Pictures\\WindowsTerminal\\git-bash.png",
+                "backgroundImageStretchMode": "none",
+                "backgroundImageAlignment": "bottomRight",
+                "backgroundImageOpacity": 0.4
             }
         ]
     },
@@ -85,6 +99,8 @@
         // - "split": "auto" makes this pane open in the direction that provides the most surface area.
         // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
         // To learn more about panes, visit https://aka.ms/terminal-panes
-        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" }
+        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
+        // comamnd palette
+        { "command": "commandPalette", "keys": "ctrl+shift+p"  }
     ]
 }
