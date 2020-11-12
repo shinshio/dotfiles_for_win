@@ -13,6 +13,10 @@ $script = $HOME_PATH + $SCRIPT_FILENAME
 echo "管理者権限を獲得しています..."
 Set-ExecutionPolicy RemoteSigned
 
+echo "Powerlineモジュールをインストールしています..."
+Install-Module posh-git -Scope CurrentUser
+Install-Module oh-my-posh -Scope CurrentUser
+
 echo ($script + " を実行します...")
 Start-Process powershell -ArgumentList "-NoProfile -ExecutionPolicy unrestricted $script" -Verb runas
 

@@ -107,6 +107,13 @@ repo = 'aklt/plantuml-syntax'
 on_ft = 'markdown'
 
 # -----------
+# powershell
+# -----------
+[[plugins]]
+repo = 'PProvost/vim-ps1'
+on_ft = 'ps1'
+
+# -----------
 # toml
 # -----------
 [[plugins]]
