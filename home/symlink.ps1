@@ -14,20 +14,21 @@ xcopy /t/e/y $CurrentDir $HOME_PATH
 #mklink include subfolder
 
 $files = Get-ChildItem $CurrentDir -Recurse
-foreach ($linked in $files) {
-    if (!$linked.PSIsContainer) {
-        if ($linked.FullName -eq $MyInvocation.MyCommand.path) {
+foreach ($sourcefile in $files) {
+    if (!$sourcefile.PSIsContainer) {
+        if ($sourcefile.FullName -eq $MyInvocation.MyCommand.path) {
             continue
         }
-        $symfile = $linked.FullName.Replace($CurrentDir, $HOME_PATH)
-        if (Test-Path $symfile) {
-            echo ($symfile + "`r`n  >> 既に存在するのでスキップします。")
-            continue
+        $linkfile = $sourcefile.FullName.Replace($CurrentDir, $HOME_PATH)
+        if (Test-Path $linkfile) {
+            echo ($linkfile + "`r`n  >> 上書きします...")
+            Remove-Item -Force $linkfile
         } else {
-            echo ($symfile + "`r`n  >> シンボリックリンクを作成します。")
-            cmd /c mklink $symfile $linked.FullName
+            echo ($linkfile + "`r`n  >> 新規作成します...")
         }
+        cmd /c mklink $linkfile $sourcefile.FullName
     }
 }
 
+echo ([string]($files|Measure-Object).Count + "個のファイルを処理しました...")
 pause
