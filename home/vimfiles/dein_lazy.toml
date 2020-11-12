@@ -15,6 +15,30 @@ hook_add = '''
   let airline#extensions#coc#stl_format_warn = '%W{[%w(#%fw)]}'
 '''
 
+[[plugins]]
+repo = 'neoclide/coc-json'
+build = 'yarn install --frozen-lockfile'
+on_source = ['coc.nvim']
+
+[[plugins]]
+repo = 'neoclide/coc-python'
+build = 'yarn install --frozen-lockfile'
+on_source = ['coc.nvim']
+
+[[plugins]]
+repo = 'neoclide/coc-css'
+build = 'yarn install --frozen-lockfile'
+on_source = ['coc.nvim']
+
+[[plugins]]
+repo = 'neoclide/coc-html'
+build = 'yarn install --frozen-lockfile'
+on_source = ['coc.nvim']
+
+[[plugins]]
+repo = 'coc-extensions/coc-powershell'
+build = 'yarn install --frozen-lockfile'
+on_source = ['coc.nvim']
 
 # ------
 # unite
@@ -81,13 +105,6 @@ hook_source = '''
 [[plugins]]
 repo = 'aklt/plantuml-syntax'
 on_ft = 'markdown'
-
-# -----------
-# powershell
-# -----------
-[[plugins]]
-repo = 'PProvost/vim-ps1'
-on_ft = 'ps1'
 
 # -----------
 # toml
