@@ -10,6 +10,9 @@ $work = "C:/work/"
 $tools = "C:/tools/"
 $desktop = "C:/Users/$env:USERNAME/desktop/"
 $keijiban = "\\sd042cfs2037/02.掲示板"
+$hino = "\\sd042cfs2037\02.掲示板\38.日野"
+$isuzu = "\\sd042cfs2037\02.掲示板\39.いすゞ"
+$fuso = "\\sd042cfs2037\02.掲示板\38.ふそう"
 
 $jr_hp = "https://traininfo.jr-central.co.jp/zairaisen/index.html?lang=ja"
 $webkintai_hp = "https://www.kintaiatweb.jp/k_ta/login.aspx"
@@ -80,12 +83,16 @@ function cd_home() {cd $home}
 function cd_work() {cd $work}
 function cd_tools() {cd $tools}
 function cd_desktop() {cd $desktop}
-function cd_keijiban() {cd $keijiban}
 
 # open HP with edge
 function edge_jrhp() {start microsoft-edge:$jr_hp}
 function edge_webkintai() {start microsoft-edge:$webkintai_hp}
 function edge_dtems() {start microsoft-edge:$dtems_hp}
+
+# open with explorer
+function hino() {start $hino}
+function isuzu() {start $isuzu}
+function fuso() {start $fuso}
 
 # ----------
 # alias
@@ -93,6 +100,7 @@ function edge_dtems() {start microsoft-edge:$dtems_hp}
 function exit_(){exit}
 Set-Alias q exit_
 Set-Alias v vim
+Set-Alias g git
 Set-Alias which where.exe
 Set-Alias yoyakuhyo c:/tools/yoyakuhyo/yoyakuhyo.exe
 

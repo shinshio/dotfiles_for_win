@@ -1,0 +1,9 @@
+Thumbs.db
+
+.env/
+.venv/
+env/
+venv/
+
+build/
+dist/

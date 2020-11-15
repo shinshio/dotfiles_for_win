@@ -1,0 +1,15 @@
+[user]
+	name = shinshio
+	email = ao57paulow@gmail.com
+[core]
+	quotepath = false
+	editor = vim
+[http]
+	proxy = http://in-proxy-o:8080
+[alias]
+    st = status
+    cm = commit
+    gr = log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso
+    tofile = log --pretty='format:%h %cd %s [%an]' --date=iso --encoding=sijs
+[gui]
+	recentrepo = C:/Users/10035637417/dotfiles_for_win
