@@ -9,7 +9,7 @@
 ## インストール
 
 powershellで以下を実行する。
-管理者権限が必要かも。
+途中管理者権限を要求されたら許可すること。
 ```ps1
 cd ~
 git clone https://github.com/shinshio/dotfiles_for_win.git
@@ -17,10 +17,6 @@ git clone https://github.com/shinshio/dotfiles_for_win.git
 cd dotfiles_for_win
 ./installer.ps1
 ```
-
-## アンインストール
-
-symlinkファイルを削除する。
 
 対象は以下。
 
@@ -30,3 +26,11 @@ symlinkファイルを削除する。
 - ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
 - ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
 
+## アンインストール
+
+powershellで以下を実行する。
+
+```ps1
+cd ~/dotfiles_for_win
+./uninstaller.ps1
+```
