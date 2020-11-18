@@ -23,7 +23,7 @@
     // Each one of them will appear in the 'New Tab' dropdown,
     //   and can be invoked from the commandline with `wt.exe -p xxx`
     // To learn more about profiles, visit https://aka.ms/terminal-profile-settings
-    "initialPosition": "3,330",
+    "initialPosition": "0,0",
     "initialCols": 115,
     "initialRows": 30,
     "profiles":
