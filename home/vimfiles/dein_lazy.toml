@@ -40,6 +40,11 @@ repo = 'coc-extensions/coc-powershell'
 build = 'yarn install --frozen-lockfile'
 on_source = ['coc.nvim']
 
+[[plugins]]
+repo = 'josa42/coc-go'
+build = 'yarn install --frozen-lockfile'
+on_source = ['coc.nvim']
+
 # ------
 # unite
 # ------
@@ -120,3 +125,12 @@ on_ft = 'ps1'
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
 
+# -----------
+# golang
+# -----------
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = ['go']
+hook_add = '''
+  let g:go_bin_path = expand("C:/work/go/bin")
+'''

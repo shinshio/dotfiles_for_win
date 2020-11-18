@@ -5,6 +5,9 @@
 - VIM(ダウンロード、パス設定は割愛)
 - Git(必要に応じてプロキシ設定)
 - Powerline対応フォント([Cascadia Code PL](https://github.com/microsoft/cascadia-code/releases))
+- Node.js(vim プラグインでnpm, yarnを必要とする場合)
+  - npm
+  - yarn
 
 ## インストール
 
@@ -18,13 +21,12 @@ cd dotfiles_for_win
 ./installer.ps1
 ```
 
-対象は以下。
-
-- ~/_vimrc
-- ~/_gvimrc
-- ~/vimfiles/*
+デフォルトでプロキシの設定をしている。
+必要に応じて以下ファイルのプロキシ設定をコメントアウトすること。
+- ~/.gitconfig
+  - `proxy = http://in-proxy-o:8080`
 - ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
-- ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
+  - `Set-Item -path Env:http_proxy -value http://in-proxy-o:8080`
 
 ## アンインストール
 
