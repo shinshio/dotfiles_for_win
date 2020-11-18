@@ -105,6 +105,8 @@ set nofoldenable
 set wrap
 set display=lastline
 "colorscheme default
+set splitbelow
+set splitright
 
 " ----------------------------------
 "   status line(without powerline)

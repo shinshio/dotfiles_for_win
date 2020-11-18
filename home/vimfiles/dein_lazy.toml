@@ -129,8 +129,6 @@ on_ft = ['toml']
 # golang
 # -----------
 [[plugins]]
-repo = 'fatih/vim-go'
+repo = 'mattn/vim-goimports'
 on_ft = ['go']
-hook_add = '''
-  let g:go_bin_path = expand("C:/work/go/bin")
-'''
+
