@@ -1,11 +1,11 @@
+[include]
+	path = ~/.gitconfig.local
 [user]
 	name = shinshio
 	email = ao57paulow@gmail.com
 [core]
 	quotepath = false
 	editor = vim
-[http]
-	proxy = http://in-proxy-o:8080
 [alias]
     st = status
     cm = commit

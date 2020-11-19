@@ -117,7 +117,8 @@ Set-Alias dtems edge_dtems
 # proxy server settings
 # ----------
 
-Set-Item -path Env:http_proxy -value http://in-proxy-o:8080
+# Not write at this file
+# Set at windows path setting
 
 # ----------
 #  prompt
