@@ -4,6 +4,7 @@
 
 - [VIM](https://www.kaoriya.net/software/vim/)
   - kaoriya版を推奨。vimprocがビルド済みの状態で同梱されているため。
+  - `:set encoding=utf-8`にしておく。kaoriya版の場合、`vim/switches/catalog/utf-8.vim`を`vim/swtches/enable`に置いておく。
 - [Git](https://gitforwindows.org/)
   - プロキシ設定など固有環境依存のモノは、`~/.gitconfig.local`を作成して入力すること。
 - [Cica](https://github.com/miiton/Cica)
