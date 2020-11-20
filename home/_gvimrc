@@ -1,7 +1,7 @@
 source $VIMRUNTIME/delmenu.vim
 set langmenu=ja_jp.utf-8
 source $VIMRUNTIME/menu.vim
-set guifont=Cascadia_Code_PL:h12
+set guifont=Cica:h14
 set ambiwidth=double
 
 let g:save_window_file = expand('~/.vimwinpos')

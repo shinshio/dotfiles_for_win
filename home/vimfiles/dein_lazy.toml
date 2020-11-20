@@ -78,9 +78,6 @@ hook_add = '''
 repo = 'Shougo/neomru.vim'
 on_source = ['unite.vim']
 
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
 # ---------
 # Markdown
 # ---------

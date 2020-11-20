@@ -71,3 +71,5 @@ hook_add = '''
   \}
 '''
 
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'

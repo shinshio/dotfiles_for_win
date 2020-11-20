@@ -6,8 +6,8 @@
   - kaoriya版を推奨。vimprocがビルド済みの状態で同梱されているため。
 - [Git](https://gitforwindows.org/)
   - プロキシ設定など固有環境依存のモノは、`~/.gitconfig.local`を作成して入力すること。
-- [Cascadia Code PL](https://github.com/microsoft/cascadia-code/releases)
-  - Powerline対応フォント(Windows Terminal の`settings.json`に使用)
+- [Cica](https://github.com/miiton/Cica)
+  - Powerline対応フォント(Windows Terminal, GVIMに使用)
 - [Node.js](https://nodejs.org/ja/download/)
   - coc.nvimのエクステンションのビルドに必要。
   - yarnも用意しておくこと。`npm install -g yarn`でインストール。

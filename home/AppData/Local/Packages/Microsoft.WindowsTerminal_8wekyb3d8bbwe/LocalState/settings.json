@@ -31,8 +31,8 @@
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
-            "fontFace": "Cascadia Code PL",
-            "fontSize": 13,
+            "fontFace": "Cica",
+            "fontSize": 14,
             "cursorShape": "vintage"
         },
         "list":
