@@ -1,4 +1,4 @@
 {
-  "http.proxy": "http://in-proxy-o:8080",
+  "suggest.keepCompleteopt": true,
   "python.jediEnabled": false
 }

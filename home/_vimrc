@@ -80,6 +80,12 @@ nmap     <Esc><Esc> :nohlsearch<CR><Esc>
 nnoremap j          gj
 nnoremap k          gk
 let mapleader = "\<Space>"
+inoremap ( ()<LEFT>
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+inoremap ` ``<LEFT>
 
 " ---------
 "   shell
@@ -161,3 +167,12 @@ filetype plugin indent on
 set shellslash
 set t_Co=256
 set termguicolors
+
+" ----------------
+"   completement
+" ----------------
+set completeopt=menuone,noinsert
+inoremap <expr><CR> pumvisible() ? "<C-y>": "<CR>"
+inoremap <expr><C-n> pumvisible() ? "<Down>": "<C-n>"
+inoremap <expr><C-p> pumvisible() ? "<Up>": "<C-p>"
+

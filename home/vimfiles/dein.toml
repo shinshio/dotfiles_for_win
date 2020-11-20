@@ -35,9 +35,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'cohama/lexima.vim'
-
-[[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 hook_add = '''
   nnoremap <F7> :FixWhitespace<CR>
