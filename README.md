@@ -1,8 +1,14 @@
 # dotfiles_for_win
 
+Windows10向けのdotfiles。
+
+ターミナル、シェル(PowerShell)、VIMの設定をしています。
+
 ## Requirements
 
-- [VIM](https://www.kaoriya.net/software/vim/)
+- [Windows Terminal](https://github.com/microsoft/terminal)
+  - `settings.json`が`~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState`にあることを確認しておくこと。
+- - [VIM](https://www.kaoriya.net/software/vim/)
   - kaoriya版を推奨。vimprocがビルド済みの状態で同梱されているため。
   - `:set encoding=utf-8`にしておく。kaoriya版の場合、`vim/switches/catalog/utf-8.vim`を`vim/swtches/enable`に置いておく。
 - [Git](https://gitforwindows.org/)
