@@ -86,6 +86,7 @@ inoremap [ []<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap ` ``<LEFT>
+au FileType qf nnoremap <silent><buffer>q :quit<CR>
 
 " ---------
 "   shell
