@@ -67,26 +67,15 @@ set incsearch  " highlight character at every input character
 set wrapscan   " wrap search results
 set hlsearch   " highlight searched word
 
+" ----------------
+"   completement
+" ----------------
+set completeopt=menuone,noinsert
+
 " ---------------
 "   key binding
 " ---------------
-nnoremap Y y$
-inoremap jj         <ESC>
-noremap  <S-h>      0
-noremap  <S-l>      $
-nnoremap +          <C-a>
-nnoremap -          <C-x>
-nmap     <Esc><Esc> :nohlsearch<CR><Esc>
-nnoremap j          gj
-nnoremap k          gk
 let mapleader = "\<Space>"
-inoremap ( ()<LEFT>
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
-inoremap ` ``<LEFT>
-au FileType qf nnoremap <silent><buffer>q :quit<CR>
 
 " ---------
 "   shell
@@ -170,13 +159,26 @@ set shellslash
 set t_Co=256
 set termguicolors
 
-" ----------------
-"   completement
-" ----------------
-set completeopt=menuone,noinsert
-inoremap <expr><CR> pumvisible() ? "<C-y>": "<CR>"
+" ---------------
+"   key binding
+" ---------------
+" move
+inoremap jj         <ESC>
+nnoremap j          gj
+nnoremap k          gk
+noremap  <S-h>      0
+noremap  <S-l>      $
+nmap     <Esc><Esc> :nohlsearch<CR><Esc>
+" edit
+nnoremap Y y$
+nnoremap +          <C-a>
+nnoremap -          <C-x>
+nnoremap <CR> i<CR><Esc>
+" completement
 inoremap <expr><C-n> pumvisible() ? "<Down>": "<C-n>"
 inoremap <expr><C-p> pumvisible() ? "<Up>": "<C-p>"
 inoremap <expr><Tab> pumvisible() ? "<C-n>": "<Tab>"
 inoremap <expr><S-Tab> pumvisible() ? "<C-p>": "<S-Tab>"
+" quickfix"
+au FileType qf nnoremap <silent><buffer>q :quit<CR>
 
