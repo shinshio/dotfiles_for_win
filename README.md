@@ -2,13 +2,16 @@
 
 Windows10向けのdotfiles。
 
-ターミナル、シェル(PowerShell)、VIMの設定をしています。
+ターミナル、シェル(PowerShell)、VIM、VSCodeの設定をしています。
 
 ## Requirements
 
 - [Windows Terminal](https://github.com/microsoft/terminal)
   - `settings.json`が`~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState`にあることを確認しておくこと。
-- - [VIM](https://www.kaoriya.net/software/vim/)
+- [VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)
+  - `settings.json`, `keybindings.json`を管理しています。
+  - extensionsは下記Installerとは別に手動実行が必要です。
+- [VIM](https://www.kaoriya.net/software/vim/)
   - kaoriya版を推奨。vimprocがビルド済みの状態で同梱されているため。
   - `:set encoding=utf-8`にしておく。kaoriya版の場合、`vim/switches/catalog/utf-8.vim`を`vim/swtches/enable`に置いておく。
 - [Git](https://gitforwindows.org/)
@@ -43,6 +46,14 @@ powershellで以下を実行する。
 cd ~/dotfiles_for_win
 ./uninstaller.ps1
 ```
+
+## VSCodeのextensionsの同期
+
+- ローカルのVSCodeのextensionsをリモートにpushするとき
+  - `./update_vscode_extensions.ps1`を実行する。
+- リモートのextnsionsをローカル環境にインストールするとき
+  - `./install_vscode_extensions.ps1`を実行する。
+  - ローカルにあってリモートにないものはそのまま。
 
 ## Dependencies at each languages
 

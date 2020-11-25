@@ -1,0 +1,84 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "vscode-icons",
+
+    "files.insertFinalNewline": true,
+
+    "workbench.editor.closeEmptyGroups": false,
+
+    "breadcrumbs.enabled": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+    // https://python-climbing.com/vscode-auto-off/
+    "typescript.tsc.autoDetect": "off",
+    "grunt.autoDetect": "off",
+    "jake.autoDetect": "off",
+    "npm.autoDetect": "off",
+    "gulp.autoDetect": "off",
+    "python.jediEnabled": false,
+    "C_Cpp.updateChannel": "Insiders",
+
+    // arduino
+    "arduino.path": "C:/Program Files (x86)/Arduino",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "window.openFilesInNewWindow": "on",
+
+    // open file at new tab
+    "workbench.editor.enablePreview": false,
+
+    // python import error
+    "python.envFile": "${workspaceFolder}/.env",
+    "editor.largeFileOptimizations": false,
+    "window.zoomLevel": 0,
+    "files.encoding": "utf8bom",
+    "files.eol": "\r\n",
+    "http.proxyStrictSSL": false,
+    "extensions.ignoreRecommendations": false,
+    "extensions.autoUpdate": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.maxColumn": 200,
+    "python.languageServer": "Pylance",
+    "platformio-ide.disablePIOHomeStartup": true,
+    "python.showStartPage": false,
+    "python.venvFolders": [
+        ".venv"
+    ],
+    "python.venvPath": ".venv,",
+
+    "editor.rulers": [
+    80
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.hlsearch": true,
+    "markdown-pdf.styles": [
+        "C:/Users/10035637417/vimfiles/css/markdown.css"
+    ],
+    "markdown-pdf.includeDefaultStyles": false,
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "$HOME/_vimrc",
+    "markdown.extension.list.indentationSize": "inherit",
+    "markdown-pdf.margin.left": "0cm",
+    "markdown-pdf.margin.right": "0cm",
+    "markdown-pdf.margin.bottom": "0cm",
+    "markdown-pdf.displayHeaderFooter": false,
+    "markdown-pdf.margin.top": "0cm",
+    "plantuml.commandArgs": [
+        "-Xmx2g",
+        "-DPLANTUML_LIMIT_SIZE=16384"
+    ],
+    "plantuml.render": "PlantUMLServer",
+    "plantuml.exportSubFolder": false,
+    "plantuml.exportOutDir": ".",
+    "plantuml.server": "https://www.plantuml.com/plantuml",
+    "terminal.integrated.fontFamily": "Cica",
+}
