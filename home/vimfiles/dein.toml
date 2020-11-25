@@ -14,6 +14,9 @@ hook_add = '''
   au VimEnter * nested colorscheme tender
 '''
 
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+
 
 # ----
 # git
@@ -47,14 +50,12 @@ hook_add = '''
 '''
 
 
-# ------
-# shell
-# ------
+# ---------
+# quickrun
+# ---------
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 hook_add = '''
-  let g:quickrun_no_default_key_mappings = 1
-  nnoremap <leader>r :write<CR>:QuickRun -mode n<CR>
   let g:quickrun_config = {
   \  "_": {
   \    "runner": "vimproc",
@@ -64,17 +65,23 @@ hook_add = '''
   \    'outputter' : 'error',
   \    'outputter/error/success' : 'buffer',
   \    'outputter/error/error'   : 'quickfix',
+  \    'outputter/buffer/split' : 'vertical',
   \    "outputter/buffer/close_on_empty": 1,
+  \    "hook/time/enable": 1
   \  },
   \  "go": {
-  \    "exec": "go run %s:p:t %a",
-  \    "hook/time/enable": 1
+  \    "exec": "go run %s:p:t %a"
+  \  },
+  \  "gobuild": {
+  \    "exec": "go build %o"
   \  }
   \}
 '''
 
+
+# ------
+# icons
+# ------
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
 
-[[plugins]]
-repo = 'sheerun/vim-polyglot'
