@@ -1,6 +1,13 @@
-﻿# required for powerline:
-#     Install-Modele posh-git -Scope CurrentUser
-#     Install-Modele oh-my-posh  -Scope CurrentUser
+﻿<#
+    required for powerline:
+        Install-Modele posh-git -Scope CurrentUser
+        Install-Modele oh-my-posh  -Scope CurrentUser
+#>
+
+
+if (Test-Path ~/.config/powershell/config.ps1) {
+    . "~/.config/powershell/config.ps1"
+}
 
 # ----------
 # variables
@@ -9,14 +16,7 @@
 $work = "C:/work/"
 $tools = "C:/tools/"
 $desktop = "C:/Users/$env:USERNAME/desktop/"
-$keijiban = "\\sd042cfs2037/02.掲示板"
-$hino = "\\sd042cfs2037\02.掲示板\38.日野"
-$isuzu = "\\sd042cfs2037\02.掲示板\39.いすゞ"
-$fuso = "\\sd042cfs2037\02.掲示板\38.ふそう"
-
 $jr_hp = "https://traininfo.jr-central.co.jp/zairaisen/index.html?lang=ja"
-$webkintai_hp = "https://www.kintaiatweb.jp/k_ta/login.aspx"
-$dtems_hp = "https://www-pt.densotechno.co.jp/wps/myportal/"
 
 
 # ----------
@@ -34,10 +34,7 @@ function Global:sudo($Program="powershell", $Argument){
 }
 
 # ls -force as alias as lsa
-function la() {
-    Get-ChildItem -force
-    # Get-ChildItem -force | Sort-Object {$_.Name}
-}
+function la() { Get-ChildItem -force }
 
 # ls after cd automatically
 function cl() {
@@ -49,69 +46,24 @@ function cl() {
     catch {"$_"}
 }
 
-# exec python scripts
-function qr() {
-    $pwd = pwd
-    cd C:/work/python3/QRcode/
-    pipenv run python main.py
-    cd $pwd
-}
-function goodmorning() {
-    $pwd = pwd
-    cd C:/work/python3/goodmorning/
-    pipenv run python ./src/main.py
-    cd $pwd
-}
-function goodbye() {
-    $pwd = pwd
-    cd C:/work/python3/goodbye/
-    pipenv run python ./src/main.py
-    cd $pwd
-}
-function kintai() {
-    C:/work/powershell/scripts/kintai.ps1
-}
-function todo() {
-    Param($option)
-    $pwd = pwd
-    cd C:/work/python3/todo/
-    pipenv run python ./src/main.py $option
-    cd $pwd
-}
-# cd
-function cd_home() {cd $home}
-function cd_work() {cd $work}
-function cd_tools() {cd $tools}
-function cd_desktop() {cd $desktop}
-
-# open HP with edge
-function edge_jrhp() {start microsoft-edge:$jr_hp}
-function edge_webkintai() {start microsoft-edge:$webkintai_hp}
-function edge_dtems() {start microsoft-edge:$dtems_hp}
-
-# open with explorer
-function hino() {start $hino}
-function isuzu() {start $isuzu}
-function fuso() {start $fuso}
 
 # ----------
 # alias
 # ----------
-function exit_(){exit}
-Set-Alias q exit_
+# start application
+function q() {exit}
 Set-Alias v vim
 Set-Alias g git
 Set-Alias which where.exe
-Set-Alias yoyakuhyo c:/tools/yoyakuhyo/yoyakuhyo.exe
+Set-Alias activate ./.venv/Scripts/activate.ps1
+# change directory
+function home() {cd $home}
+function work() {cd $work}
+function tools() {cd $tools}
+function desktop() {cd $desktop}
+# open HP with edge
+function densha() {start $jr_hp}
 
-Set-Alias home cd_home
-Set-Alias work cd_work
-Set-Alias tools cd_tools
-Set-Alias desktop cd_desktop
-Set-Alias keijiban cd_keijiban
-Set-Alias densha edge_jrhp
-Set-Alias webkintai edge_webkintai
-Set-Alias dtems edge_dtems
 
 # ----------
 # proxy server settings

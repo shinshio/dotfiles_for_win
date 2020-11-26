@@ -29,15 +29,16 @@ Windows10向けのdotfiles。
 
 1. 上記のとおり、Windowsに`HTTP_PROXY`, `HTTPS_PROXY`を通しておくこと。
 2. 上記のとおり、Gitのプロキシ設定を`~/.gitconfig.local`に入力しておくこと。
-3. powershellで以下を実行する。
+3. Powershellに必要なローカル固有の設定は`~/.config/powershell/config.ps1`に入力しておくこと。
+4. powershellで以下を実行する。
   途中管理者権限を要求されたら許可すること。
-  ```ps1
-  cd ~
-  git clone https://github.com/shinshio/dotfiles_for_win.git
+    ```ps1
+    cd ~
+    git clone https://github.com/shinshio/dotfiles_for_win.git
 
-  cd dotfiles_for_win
-  ./installer.ps1
-  ```
+    cd dotfiles_for_win
+    ./installer.ps1
+    ```
 
 ## Uninstallation
 
@@ -56,6 +57,11 @@ cd ~/dotfiles_for_win
   - ローカルにあってリモートにないものはそのまま。
 
 ## Dependencies at each languages
+
+### Python
+
+- 仮想環境のパス名
+  - `プロジェクトルート/.venv`
 
 ### Golang
 
