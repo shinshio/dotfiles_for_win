@@ -102,7 +102,7 @@ repo = 'previm/previm'
 on_ft = 'markdown'
 hook_source = '''
   let g:previm_disable_default_css = 1
-  let g:previm_custom_css_path = 'C:/Users/10035637417/vimfiles/stylesheet/markdown.css'
+  let g:previm_custom_css_path = '~/vimfiles/stylesheet/markdown.css'
   nnoremap <F5> :PrevimOpen<CR>
 '''
 
