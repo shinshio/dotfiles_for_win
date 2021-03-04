@@ -65,10 +65,23 @@ function desktop() {cd $desktop}
 function densha() {start $jr_hp}
 
 
+# ------------
+#  encoding
+# ------------
+Set-PSReadLineOption -EditMode Vi
+# Set-PSReadLineKeyHandler -Chord j,j -Function ViCommandMode
+Set-PSReadLineKeyHandler -Key Ctrl+j -Function ViCommandMode
+
+# ------------
+#  encoding
+# ------------
+[System.Console]::OutputEncoding = [System.Text.Encoding]::GetEncoding("utf-8")
+[System.Console]::InputEncoding = [System.Text.Encoding]::GetEncoding("utf-8")
+
+
 # ----------
 # proxy server settings
 # ----------
-
 # Not write at this file
 # Set at windows path setting
 
