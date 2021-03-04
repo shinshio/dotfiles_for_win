@@ -163,7 +163,8 @@ set termguicolors
 "   key binding
 " ---------------
 " move
-inoremap jj         <ESC>
+inoremap jj      <ESC>
+inoremap <C-j> <ESC>
 nnoremap j          gj
 nnoremap k          gk
 noremap  <S-h>      0
