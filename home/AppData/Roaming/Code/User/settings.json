@@ -42,9 +42,7 @@
         ".venv"
     ],
     "python.venvPath": ".venv,",
-    "editor.rulers": [
-        80
-    ],
+    "editor.rulers": [80],
     "markdown-pdf.styles": [
         "C:/Users/10035637417/vimfiles/css/markdown.css"
     ],
@@ -65,6 +63,16 @@
     "plantuml.server": "https://www.plantuml.com/plantuml",
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "$HOME/_vimrc",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["L"],
+            "after": ["$"]
+        },
+        {
+            "before": ["H"],
+            "after": ["0"]
+        }
+    ],
     "vim.insertModeKeyBindings": [
         {
             "before": ["j", "j"],
@@ -82,10 +90,23 @@
     "markdown.preview.fontSize": 16,
     "debug.console.fontSize": 16,
     "terminal.integrated.fontSize": 16,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": [],
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "[typescript]": {
+        "editor.tabSize": 2
+    },
+    "[typescriptreact]": {
+        "editor.tabSize": 2
+    },
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": [
+            "document"
+        ]
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
 }
