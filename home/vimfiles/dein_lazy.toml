@@ -33,27 +33,7 @@ build = 'yarn install --frozen-lockfile'
 on_source = ['coc.nvim']
 
 [[plugins]]
-repo = 'neoclide/coc-python'
-build = 'yarn install --frozen-lockfile'
-on_source = ['coc.nvim']
-
-[[plugins]]
-repo = 'neoclide/coc-css'
-build = 'yarn install --frozen-lockfile'
-on_source = ['coc.nvim']
-
-[[plugins]]
-repo = 'neoclide/coc-html'
-build = 'yarn install --frozen-lockfile'
-on_source = ['coc.nvim']
-
-[[plugins]]
 repo = 'coc-extensions/coc-powershell'
-build = 'yarn install --frozen-lockfile'
-on_source = ['coc.nvim']
-
-[[plugins]]
-repo = 'josa42/coc-go'
 build = 'yarn install --frozen-lockfile'
 on_source = ['coc.nvim']
 
@@ -113,13 +93,6 @@ hook_source = '''
   let g:vim_markdown_conceal=0
 '''
 
-# ---------
-# PlantUML
-# ---------
-[[plugins]]
-repo = 'aklt/plantuml-syntax'
-on_ft = 'markdown'
-
 # -----------
 # powershell
 # -----------
@@ -135,9 +108,12 @@ repo = 'cespare/vim-toml'
 on_ft = ['toml']
 
 # -----------
-# golang
+# csv
 # -----------
 [[plugins]]
-repo = 'mattn/vim-goimports'
-on_ft = ['go']
-
+repo = 'junegunn/vim-easy-align'
+on_ft = ['csv']
+hook_source = '''
+  xmap ga <Plug>(EasyAlign)
+  nmap ga <Plug>(EasyAlign)
+'''

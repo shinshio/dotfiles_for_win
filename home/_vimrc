@@ -148,12 +148,6 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline_theme='wombat'
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-" ** plantuml
-let g:plantuml_executable_script="C:/tools/plantuml/plantuml.bat"
-au FileType plantuml command! OpenUml :!Start-Process chrome %:p
-au Filetype markdown command! Mdpu2png : ! "C:\work\powershell\scripts\mdpu2png.ps1" %:p
-nnoremap <F8> :Mdpu2png<CR>
-
 filetype plugin indent on
 set shellslash
 set t_Co=256
