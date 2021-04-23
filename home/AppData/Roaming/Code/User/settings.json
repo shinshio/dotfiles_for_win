@@ -26,7 +26,6 @@
     // python import error
     "python.envFile": "${workspaceFolder}/.env",
     "editor.largeFileOptimizations": false,
-    "window.zoomLevel": 0,
     "files.encoding": "utf8bom",
     "files.eol": "\r\n",
     "http.proxyStrictSSL": false,
@@ -44,7 +43,7 @@
     "python.venvPath": ".venv,",
     "editor.rulers": [80],
     "markdown-pdf.styles": [
-        "C:/Users/10035637417/vimfiles/css/markdown.css"
+        "C:\\Users\\10035637417\\vimfiles\\stylesheet\\markdown.css"
     ],
     "markdown-pdf.includeDefaultStyles": false,
     "markdown.extension.list.indentationSize": "inherit",
@@ -90,7 +89,12 @@
     "markdown.preview.fontSize": 16,
     "debug.console.fontSize": 16,
     "terminal.integrated.fontSize": 16,
-    "workbench.editorAssociations": [],
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
     "[javascript]": {
         "editor.tabSize": 2
@@ -108,5 +112,13 @@
             "document"
         ]
     },
-    "liveServer.settings.donotShowInfoMsg": true,
+    "[powershell]": {
+        "files.encoding": "shiftjis"
+    },
+    "files.associations": {
+        "*.dcm": "vba"
+    },
+    "[vba]": {
+        "files.encoding": "shiftjis"
+    },
 }
