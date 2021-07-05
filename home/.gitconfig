@@ -1,15 +1,17 @@
 [include]
-	path = ~/.gitconfig.local
+path = ~/.gitconfig.local
 [user]
-	name = shinshio
-	email = ao57paulow@gmail.com
+    name = shinshio
+    email = ao57paulow@gmail.com
 [core]
-	quotepath = false
-	editor = vim
+    quotepath = false
+    autoCRLF = false
+    editor = \"C:/tools/Neovim/bin/nvim.exe\" -c \"set fenc=utf-8\"
 [alias]
-	df = diff
-	br = branch
+    df = diff
+    br = branch
     st = status
     cm = commit
+    co = checkout
     gr = log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso
     tofile = log --pretty='format:%h %cd %s [%an]' --date=iso --encoding=sijs
