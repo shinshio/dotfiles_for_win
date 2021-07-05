@@ -47,7 +47,7 @@ hook_add = '''
 # motion
 # ------
 [[plugins]]
-repo = 'easymotion/vim-easymotion'
+repo = 'tpope/vim-surround'
 
 # ------
 # icons
