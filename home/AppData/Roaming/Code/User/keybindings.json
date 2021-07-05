@@ -28,5 +28,11 @@
     {
         "key": "ctrl+shift+n",
         "command": "explorer.newFolder"
+    },
+    {
+        "command": "vscode-neovim.compositeEscape1",
+        "key": "j",
+        "when": "neovim.mode == insert && editorTextFocus",
+        "args": "j"
     }
 ]

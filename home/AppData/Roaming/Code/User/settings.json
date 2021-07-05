@@ -18,7 +18,6 @@
     // arduino
     "arduino.path": "C:/Program Files (x86)/Arduino",
     "C_Cpp.intelliSenseEngine": "Tag Parser",
-    "files.trimTrailingWhitespace": true,
     "files.trimFinalNewlines": true,
     "window.openFilesInNewWindow": "on",
     // open file at new tab
@@ -40,60 +39,23 @@
         ".venv"
     ],
     "python.venvPath": ".venv,",
-    "editor.rulers": [80],
-    "markdown-pdf.styles": [
-        "C:\\Users\\10035637417\\vimfiles\\stylesheet\\markdown.css"
+    "editor.rulers": [
+        80
     ],
-    "markdown-pdf.includeDefaultStyles": false,
     "markdown.extension.list.indentationSize": "inherit",
     "markdown-pdf.margin.left": "0cm",
     "markdown-pdf.margin.right": "0cm",
     "markdown-pdf.margin.bottom": "0cm",
     "markdown-pdf.displayHeaderFooter": false,
     "markdown-pdf.margin.top": "0cm",
-    "plantuml.commandArgs": [
-        "-Xmx2g",
-        "-DPLANTUML_LIMIT_SIZE=16384"
-    ],
-    "plantuml.render": "PlantUMLServer",
-    "plantuml.exportSubFolder": false,
-    "plantuml.exportOutDir": ".",
-    "plantuml.server": "https://www.plantuml.com/plantuml",
-    "vim.vimrc.enable": true,
-    "vim.vimrc.path": "$HOME/_vimrc",
-    "vim.normalModeKeyBindings": [
-        {
-            "before": ["L"],
-            "after": ["$"]
-        },
-        {
-            "before": ["H"],
-            "after": ["0"]
-        }
-    ],
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        }
-    ],
-    "vim.hlsearch": true,
-    "vim.leader": "<Space>",
-    "vim.useSystemClipboard": true,
-    "vim.easymotion": true,
-    "vim.easymotionKeys": "sdfghjkl",
     "editor.fontFamily": "Cica, Consolas, 'Courier New', monospace",
     "editor.fontSize": 16,
     "markdown.preview.fontSize": 16,
     "debug.console.fontSize": 16,
     "terminal.integrated.fontSize": 16,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "[javascript]": {
         "editor.tabSize": 2
     },
@@ -117,10 +79,22 @@
         "*.dcm": "vba"
     },
     "[vba]": {
+        "editor.tabSize": 4,
         "files.encoding": "shiftjis"
     },
     "jupyter.interactiveWindowMode": "perFile",
     "editor.minimap.enabled": false,
     "files.autoGuessEncoding": true,
     "workbench.colorTheme": "Atom One Dark",
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "editor.formatOnSave": true,
+    "python.linting.flake8Args": [
+        "--ignore=E501, W503"
+    ],
+    "markdown-pdf.highlightStyle": "github.css",
+    "workbench.editor.untitled.hint": "hidden",
+    "vscode-neovim.neovimExecutablePaths.win32": "C:/tools/Neovim/bin/nvim.exe",
+    "vscode-neovim.neovimInitVimPaths.win32": "C:/Users/10035637417/AppData/Local/nvim/init.vim",
+    "vscode-neovim.mouseSelectionStartVisualMode": true,
 }
