@@ -1,0 +1,4 @@
+{
+  "suggest.keepCompleteopt": true,
+  "python.jediEnabled": false
+}

@@ -85,7 +85,7 @@
     "jupyter.interactiveWindowMode": "perFile",
     "editor.minimap.enabled": false,
     "files.autoGuessEncoding": true,
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Monokai",
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "editor.formatOnSave": true,
@@ -95,6 +95,7 @@
     "markdown-pdf.highlightStyle": "github.css",
     "workbench.editor.untitled.hint": "hidden",
     "vscode-neovim.neovimExecutablePaths.win32": "C:/tools/Neovim/bin/nvim.exe",
-    "vscode-neovim.neovimInitVimPaths.win32": "C:/Users/10035637417/AppData/Local/nvim/init.vim",
+    "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\10035637417\\.config\\nvim\\init.vim",
     "vscode-neovim.mouseSelectionStartVisualMode": true,
+    "security.workspace.trust.untrustedFiles": "open",
 }

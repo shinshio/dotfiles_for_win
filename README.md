@@ -2,7 +2,7 @@
 
 Windows10向けのdotfiles。
 
-ターミナル、シェル(PowerShell)、VIM、VSCodeの設定をしています。
+ターミナル、シェル(PowerShell)、~~VIM~~、Neovim、VSCodeの設定をしています。
 
 ## Requirements
 
@@ -11,9 +11,11 @@ Windows10向けのdotfiles。
 - [VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)
   - `settings.json`, `keybindings.json`を管理しています。
   - extensionsは下記Installerとは別に手動実行が必要です。
-- [VIM](https://www.kaoriya.net/software/vim/)
-  - kaoriya版を推奨。vimprocがビルド済みの状態で同梱されているため。
-  - `:set encoding=utf-8`にしておく。kaoriya版の場合、`vim/switches/catalog/utf-8.vim`を`vim/swtches/enable`に置いておく。
+- [Neovim](https://neovim.io/)
+  - バージョン0.5.0以上が必要（VSCode拡張機能）
+- ~~[VIM](https://www.kaoriya.net/software/vim/)~~
+  - ~~kaoriya版を推奨。vimprocがビルド済みの状態で同梱されているため。~~
+  - ~~`:set encoding=utf-8`にしておく。kaoriya版の場合、`vim/switches/catalog/utf-8.vim`を`vim/swtches/enable`に置いておく。~~
 - [Git](https://gitforwindows.org/)
   - プロキシ設定など固有環境依存のモノは、`~/.gitconfig.local`を作成して入力すること。
 - [Cica](https://github.com/miiton/Cica)
@@ -24,10 +26,11 @@ Windows10向けのdotfiles。
 - 環境変数設定
   - `HTTP_PROXY`として`プロキシサーバアドレス:ポート番号`を設定しておくこと。
   - `HTTPS_PROXY`として`プロキシサーバアドレス:ポート番号`を設定しておくこと。
+  - `XDG_CONFIG_HOME`として`%USERPROFILE%/.config`を設定しておくこと。
 
 ## Installation
 
-1. 上記のとおり、Windowsに`HTTP_PROXY`, `HTTPS_PROXY`を通しておくこと。
+1. 上記のとおり、Windowsに`HTTP_PROXY`, `HTTPS_PROXY`, `XDG_CONFIG_HOME`のパスを通しておくこと。
 2. 上記のとおり、Gitのプロキシ設定を`~/.gitconfig.local`に入力しておくこと。
 3. Powershellに必要なローカル固有の設定は`~/.config/powershell/config.ps1`に入力しておくこと。
 4. powershellで以下を実行する。
@@ -63,7 +66,3 @@ cd ~/dotfiles_for_win
 - 仮想環境のパス名
   - `プロジェクトルート/.venv`
 
-### Golang
-
-- goimports
-  - `go get golang.org/x/tools/cmd/goimports`

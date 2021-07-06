@@ -76,8 +76,8 @@ set completeopt=menuone,noinsert
 " ---------------
 "   key binding
 " ---------------
-let mapleader = ";"
-" let mapleader = "\<Space>"
+nnoremap <Space> <Nop>
+let mapleader = "\<Space>"
 
 " ---------
 "   shell
@@ -111,7 +111,7 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
   " .toml file
-  let s:rc_dir = expand('~/vimfiles')
+  let s:rc_dir = expand('~/.config/nvim')
   if !isdirectory(s:rc_dir)
     call mkdir(s:rc_dir, 'p')
   endif
@@ -122,11 +122,11 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(s:toml, {'lazy': 0})
   call dein#load_toml(s:toml_lazy, {'lazy': 1})
 
-  if exists('g:vscode')
-    call dein#add('asvetliakov/vim-easymotion')
-  else
-    call dein#add('easymotion/vim-easymotion')
-  endif
+  " if exists('g:vscode')
+    " call dein#add('asvetliakov/vim-easymotion')
+  " else
+    " call dein#add('easymotion/vim-easymotion')
+  " endif
 
   " end settings
   call dein#end()

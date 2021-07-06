@@ -9,10 +9,10 @@ repo = 'vim-airline/vim-airline'
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
-repo = 'jacoborus/tender.vim'
+repo = 'lsdr/monokai'
 hook_add = '''
   if !exists('g:vscode')
-    au VimEnter * nested colorscheme tender
+    au VimEnter * nested colorscheme monokai
   endif
 '''
 
@@ -49,9 +49,16 @@ hook_add = '''
 [[plugins]]
 repo = 'tpope/vim-surround'
 
+[[plugins]]
+repo = 'asvetliakov/vim-easymotion'
+hook_add = '''
+  map <Leader><Leader>s <Plug>(easymotion-bd-f2)
+  map <Leader><Leader>l <Plug>(easymotion-lineforward)
+  map <Leader><Leader>h <Plug>(easymotion-linebackward)
+'''
+
 # ------
 # icons
 # ------
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
-
