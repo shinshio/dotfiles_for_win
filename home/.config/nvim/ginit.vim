@@ -2,7 +2,7 @@ source $VIMRUNTIME/delmenu.vim
 set langmenu=ja_jp.utf-8
 source $VIMRUNTIME/menu.vim
 
-Guifont! Cica:h14
+Guifont! HackGen35Nerd\ Console:h12
 GuiTabline 0
 GuiPopupmenu 0
 

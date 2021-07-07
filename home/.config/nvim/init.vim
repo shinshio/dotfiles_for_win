@@ -3,9 +3,9 @@ let g:python3_host_prog='C:\Users\10035637417\AppData\Local\Programs\Python\Pyth
 " -----------------------
 "   Open files encoding
 " -----------------------
-if exists('&ambw')
-  set ambiwidth=single
-endif
+" if exists('&ambw')
+  " set ambiwidth=double
+" endif
 set fileencodings=utf-8,sjis,cp932
 
 " --------
@@ -157,7 +157,8 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline_theme='wombat'
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 filetype plugin indent on
 set shellslash
