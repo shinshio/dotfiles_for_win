@@ -55,10 +55,13 @@
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageOpacity": 0.40000000000000002,
                 "backgroundImageStretchMode": "none",
+                "colorScheme": "Monokai Cmder",
                 "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "name": "Windows PowerShell"
+                "name": "Windows PowerShell",
+                "padding": "8",
+                "scrollbarState": "visible"
             },
             {
                 "backgroundImage": "%USERPROFILE%\\Pictures\\WindowsTerminal\\cmd.png",
@@ -135,6 +138,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
+        },
+        {
+            "background": "#272822",
+            "black": "#272822",
+            "blue": "#01549E",
+            "brightBlack": "#7C7C7C",
+            "brightBlue": "#0383F5",
+            "brightCyan": "#58C2E5",
+            "brightGreen": "#8DD006",
+            "brightPurple": "#A87DB8",
+            "brightRed": "#F3044B",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#CCCC81",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#1A83A6",
+            "foreground": "#CACACA",
+            "green": "#74AA04",
+            "name": "Monokai Cmder",
+            "purple": "#89569C",
+            "red": "#A70334",
+            "selectionBackground": "#CCCC81",
+            "white": "#CACACA",
+            "yellow": "#B6B649"
         },
         {
             "background": "#282C34",
