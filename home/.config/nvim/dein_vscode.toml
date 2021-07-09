@@ -1,0 +1,8 @@
+
+[[plugins]]
+repo = 'asvetliakov/vim-easymotion'
+hook_add = '''
+  map <Leader><Leader>s <Plug>(easymotion-bd-f2)
+  map <Leader><Leader>l <Plug>(easymotion-lineforward)
+  map <Leader><Leader>h <Plug>(easymotion-linebackward)
+'''

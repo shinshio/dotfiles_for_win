@@ -50,7 +50,8 @@ hook_add = '''
 repo = 'tpope/vim-surround'
 
 [[plugins]]
-repo = 'asvetliakov/vim-easymotion'
+repo = 'easymotion/vim-easymotion'
+if = '''! exists('g:vscode')'''
 hook_add = '''
   map <Leader><Leader>s <Plug>(easymotion-bd-f2)
   map <Leader><Leader>l <Plug>(easymotion-lineforward)
