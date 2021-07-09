@@ -26,7 +26,11 @@ foreach ($sourcefile in $files) {
         } else {
             echo ($linkfile + "`r`n  >> V‹Kì¬‚µ‚Ü‚·...")
         }
-        cmd /c mklink $linkfile $sourcefile.FullName
+        if ($sourcefile.PSIsContainer) {
+            cmd /c mklink /D $linkfile $sourcefile.FullName
+        } else {
+            cmd /c mklink $linkfile $sourcefile.FullName
+        }
     }
 }
 
