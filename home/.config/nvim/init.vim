@@ -122,9 +122,9 @@ if dein#load_state(s:dein_dir)
   " read toml and cache
   call dein#load_toml(s:toml, {'lazy': 0})
   call dein#load_toml(s:toml_lazy, {'lazy': 1})
-  if exists('g:vscode')
-    call dein#load_toml(s:toml_vscode, {'lazy': 0})
-  endif
+  " if exists('g:vscode')
+    " call dein#load_toml(s:toml_vscode, {'lazy': 0})
+  " endif
 
   " if exists('g:vscode')
     " call dein#add('asvetliakov/vim-easymotion')

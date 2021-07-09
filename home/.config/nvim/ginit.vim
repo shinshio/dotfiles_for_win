@@ -3,11 +3,11 @@ set langmenu=ja_jp.utf-8
 source $VIMRUNTIME/menu.vim
 
 if has('nvim')
-  Guifont! HackGen35Nerd\ Console:h12
+  Guifont! Cica:h14
   GuiTabline 0
   GuiPopupmenu 0
 else
-  set guifont=HackGen35Nerd\ Console:h12
+  set guifont=Cica:h14
 endif
 
 " set ambiwidth=double
