@@ -53,7 +53,7 @@ function cl() {
 # start application
 function q() {exit}
 Set-Alias v nvim
-Set-Alias vv nvim-qt
+Set-Alias vv gvim
 Set-Alias g git
 Set-Alias which where.exe
 Set-Alias activate ./.venv/Scripts/activate.ps1
