@@ -36,6 +36,9 @@ set display=lastline
 set splitbelow
 set splitright
 set mouse=a
+set laststatus=2
+set cmdheight=2
+set showtabline=2
 
 " ----------------------------------
 "   status line(without powerline)
@@ -150,19 +153,6 @@ if len(s:removed_plugins) > 0
   call map(s:removed_plugins, "delete(v:val, 'rf')")
   call dein#recache_runtimepath()
 endif
-
-" ---------------
-"   vim-airline
-" ---------------
-set laststatus=2
-set cmdheight=2
-set showtabline=2
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline_theme='wombat'
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-" set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 filetype plugin indent on
 set shellslash

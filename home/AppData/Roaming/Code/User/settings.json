@@ -48,11 +48,7 @@
     "markdown-pdf.margin.bottom": "0cm",
     "markdown-pdf.displayHeaderFooter": false,
     "markdown-pdf.margin.top": "0cm",
-    "editor.fontFamily": "Cica, Consolas, 'Courier New', monospace",
-    "editor.fontSize": 16,
-    "markdown.preview.fontSize": 16,
-    "debug.console.fontSize": 16,
-    "terminal.integrated.fontSize": 16,
+    "editor.fontFamily": "'HackGen35Nerd Console', Consolas, 'Courier New', monospace",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },

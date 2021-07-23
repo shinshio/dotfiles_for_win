@@ -3,14 +3,22 @@ set langmenu=ja_jp.utf-8
 source $VIMRUNTIME/menu.vim
 
 if has('nvim')
-  Guifont! Cica:h14
+  Guifont! HackGen35Nerd\ Console:h12
   GuiTabline 0
   GuiPopupmenu 0
 else
-  set guifont=Cica:h14
+  set guifont=HackGen35Nerd_Console:h12
 endif
 
-" set ambiwidth=double
+set background=dark
+if has ('nvim')
+  colorscheme monokai
+endif
+
+if !has('nvim')
+  set ambiwidth=double
+endif
+
 set vb t_vb=
 set guioptions=
 
