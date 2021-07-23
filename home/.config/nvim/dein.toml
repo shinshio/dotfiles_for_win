@@ -3,21 +3,82 @@
 # view
 # ----------
 [[plugins]]
-repo = 'vim-airline/vim-airline'
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  set noshowmode
+  let g:lightline = {
+    \ 'colorscheme': 'powerline',
+    \ 'active': {
+    \   'left': [
+    \     ['mode', 'paste'],
+    \     ['mygitbranch', 'readonly', 'filename', 'modified']],
+    \   'right': [
+    \     ['lineinfo'],
+    \     ['fileformat', 'fileencoding', 'filetype']],
+    \ },
+    \ 'inactive': {
+    \   'left': [
+    \     ['readonly', 'filename', 'modified']],
+    \   'right': [
+    \     ['lineinfo']],
+    \ },
+    \ 'component_function': {
+    \   'mygitbranch': 'FugitiveHead'
+    \ },
+    \ }
+  let g:lightline.component = {
+    \ 'lineinfo': '%3l[%L]:%-2v'
+    \ }
+  let g:lightline.tab = {
+    \ 'active': ['tabnum', 'filename', 'modified'],
+    \ 'inactive': ['tabnum', 'filename', 'modified']
+    \ }
+  let g:lightline.tab_component_function = {
+    \ 'tabnum': 'lightline#tab#tabnum',
+    \ 'filename': 'LightlineTabFilename',
+    \ 'modified': 'lightline#tab#modified',
+    \ 'readonly': 'lightline#tab#readonly'
+    \ }
 
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
+  function! LightlineTabFilename(n) abort
+    let buflist = tabpagebuflist(a:n)
+    let winnr = tabpagewinnr(a:n)
+    let _ = pathshorten(expand('#'.buflist[winnr - 1].':f'))
+    return _ !=# '' ? _ : '[No Name]'
+  endfunction
+'''
+
+# [[plugins]]
+# repo = 'vim-airline/vim-airline'
+# hook_add = '''
+  # let g:airline_powerline_fonts = 1
+  # let g:airline#extensions#tabline#enabled = 1
+  # let g:airline#extensions#tabline#buffer_idx_mode = 1
+  # let g:airline_theme='wombat'
+  # set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+# '''
+
+# [[plugins]]
+# repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo = 'lsdr/monokai'
 hook_add = '''
   if !exists('g:vscode')
-    au VimEnter * nested colorscheme monokai
+    if has('gui_running') || exists('g:GuiLoaded')
+      au VimEnter * nested colorscheme monokai
+    endif
   endif
 '''
 
 [[plugins]]
 repo = 'sheerun/vim-polyglot'
+
+# ---
+# git
+# ---
+[[plugins]]
+repo = 'tpope/vim-fugitive'
 
 # -------
 # coding
